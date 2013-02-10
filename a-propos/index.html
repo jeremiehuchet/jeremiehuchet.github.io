@@ -80,6 +80,8 @@ skill-categories:
         <h2>Expériences professionnelles</h2>
 
         {% for post in site.posts %}
+        {% if post.layout == 'experience' %}
+
         <article class="experience">
           <h3>{{ post.title }} <span class="badge badge-info">{{ post.position }}</span></h3>
           <div>
@@ -89,6 +91,8 @@ skill-categories:
           <span class="label">{{ skill }}</span>
           {% endfor %}
         <article>
+
+        {% endif %}
         {% endfor %}
       </section>
 

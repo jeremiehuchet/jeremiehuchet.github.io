@@ -2,28 +2,31 @@
 layout: base
 title: Accueil
 ---
-<section>
-  <div class="container">
-    <div class="marketing">
-      <div class="row">
-        <div class="span4">
-          <div id="text-2" class="widget widget_text">
-            <h2>Développement Web</h2>
-            <div class="textwidget">Développement de site web, intégration de gestionnaire de contenus</div>
-          </div>
-        </div>
-        <div class="span4">
-          <div id="text-3" class="widget widget_text">
-            <h2>Développement Java</h2>
-            <div class="textwidget">2 ans et demi d'expérience dans le développement Java/JEE</div>
-        </div>
-      </div>
-      <div class="span4">
-        <div id="text-4" class="widget widget_text">
-          <h2>Android</h2>
-          <div class="textwidget">Expérience en développement mobile Android : ItinéRennes</div>
-        </div>
-      </div>
-    </div>
+<div class="container">
+  <div class="row">
+
+    <section role="blog" class="span8">
+      {% for post in site.posts %}
+        {% if post.layout == 'post' %}
+
+      <article>
+        {{ post.content }}
+      </article>
+
+        {% endif %}
+      {% endfor %}
+    </section>
+
+    <section role="about" class="span4">
+      <h2>Développement Web</h2>
+      <p>Développement de site web, intégration de gestionnaire de contenus</p>
+
+      <h2>Développement Java</h2>
+      <p>2 ans et demi d'expérience dans le développement Java/JEE</p>
+
+      <h2>Android</h2>
+      <p>Expérience en développement mobile Android : ItinéRennes</p>
+    </section>
+
   </div>
-</section>
+</div>

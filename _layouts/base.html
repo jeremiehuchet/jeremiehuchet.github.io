@@ -33,10 +33,9 @@
             <a class="brand" href="http://jeremie.huchet.nom.fr/" title="Jérémie Huchet" rel="home">Jérémie Huchet</a>
             <div class="nav-collapse">
               <ul class="nav">
-                <li class="{% if page.title == 'Accueil' %} active {% endif %}"><a href="/index.html"><span class="menu-item-home">Accueil</span></a></li>
-                <li class="{% if page.title == 'À propos' %} active {% endif %}"><a href="/a-propos"><span class="menu-item-about">À propos</span></a></li>
-                <li class="{% if page.title == 'Portfolio' %} active {% endif %}"><a href="/portfolio"><span class="menu-item-portfolio">Portfolio</span></a></li>
-                <li class="{% if page.title == 'Blog' %} active {% endif %}"><a href="/blog"><span class="menu-item-blog">Blog</span></a></li>
+                <li class="{% if page.title == 'Blog' %} active {% endif %}"><a href="/"><span class="menu-item-blog">Blog</span></a></li>
+                <li class="{% if page.title == 'À propos' %} active {% endif %}"><a href="/a-propos/"><span class="menu-item-about">À propos</span></a></li>
+                <li class="{% if page.title == 'Portfolio' %} active {% endif %}"><a href="/portfolio/"><span class="menu-item-portfolio">Portfolio</span></a></li>
               </ul>
             </div>
           </div>
@@ -47,7 +46,7 @@
 {{ content }}
     </div>
 
-    <footer class="container">
+    <footer class="footer">
       <p>&copy; Jérémie Huchet 2012</p>
     </footer>
 

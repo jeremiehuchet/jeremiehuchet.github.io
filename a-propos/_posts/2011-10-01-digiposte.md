@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: experience
 title: Digiposte
 position: développeur Java/JEE
 company: IT&Labs

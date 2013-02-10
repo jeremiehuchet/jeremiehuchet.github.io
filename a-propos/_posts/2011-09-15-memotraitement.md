@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: experience
 title: MémoTraitement
 position: développeur Android
 company: IT&Labs
