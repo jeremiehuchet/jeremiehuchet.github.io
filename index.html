@@ -1,32 +1,30 @@
 ---
-layout: base
+layout: default
 title: Accueil
 ---
-<div class="container">
-  <div class="row">
+<div class="row">
 
-    <section role="blog" class="span8">
-      {% for post in site.posts %}
-        {% if post.layout == 'post' %}
+  <section role="blog" class="span8">
+    {% for post in site.posts %}
+      {% if post.layout == 'post' %}
 
-      <article>
-        {{ post.content }}
-      </article>
+    <article>
+      {{ post.content }}
+    </article>
 
-        {% endif %}
-      {% endfor %}
-    </section>
+      {% endif %}
+    {% endfor %}
+  </section>
 
-    <section role="about" class="span4">
-      <h2>Développement Web</h2>
-      <p>Développement de site web, intégration de gestionnaire de contenus</p>
+  <section role="about" class="span4">
+    <h2>Développement Web</h2>
+    <p>Développement de site web, intégration de gestionnaire de contenus</p>
 
-      <h2>Développement Java</h2>
-      <p>2 ans et demi d'expérience dans le développement Java/JEE</p>
+    <h2>Développement Java</h2>
+    <p>2 ans et demi d'expérience dans le développement Java/JEE</p>
 
-      <h2>Android</h2>
-      <p>Expérience en développement mobile Android : ItinéRennes</p>
-    </section>
+    <h2>Android</h2>
+    <p>Expérience en développement mobile Android : ItinéRennes</p>
+  </section>
 
-  </div>
 </div>
