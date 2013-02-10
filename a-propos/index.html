@@ -1,0 +1,127 @@
+---
+layout: base
+title: À propos
+skill-categories:
+- title: CMS
+  skills:
+  - title: Wordpress
+    level: 1
+- title: Base de données
+  skills:
+  - title: MySQL
+    level: 6
+  - title: PostgreSQL
+    level: 2
+  - title: Oracle
+    level: 3
+- title: Bureautique
+  skills:
+  - title: Microsoft Office
+    level: 6
+  - title: OpenOffice
+    level: 6
+- title: Langues
+  skills:
+  - title: Anglais
+    level: 6
+- title: OS / Environnements
+  skills:
+  - title: Windows XP
+    level: 8
+  - title: Linux
+    level: 9
+  - title: Tomcat
+    level: 6
+  - title: Websphere
+    level: 2
+  - title: Jonas
+    level: 5
+  - title: Sun Java Enterprise System
+    level: 2
+- title: Languages / Frameworks
+  skills:
+  - title: Java
+    level: 8
+  - title: Spring
+    level: 9
+  - title: Struts 2
+    level: 5
+  - title: Hibernate
+    level: 6
+  - title: Jackrabbit / JCR
+    level: 2
+  - title: CXF
+    level: 5
+  - title: Wicket
+    level: 6
+  - title: Javascript
+    level: 4
+  - title: jQuery
+    level: 4
+- title: Outils
+  skills:
+  - title: Eclipse
+    level: 8
+  - title: Maven
+    level: 8
+  - title: Jenkins
+    level: 8
+  - title: Sonar
+    level: 8
+  - title: Subversion
+    level: 8
+  - title: Git
+    level: 6
+---
+<div id="a-propos" class="container">
+  <div class="row">
+    <div class="span8">
+      <section role="experiences">
+        <h2>Expériences professionnelles</h2>
+
+        {% for post in site.posts %}
+        <article class="experience">
+          <h3>{{ post.title }} <span class="badge badge-info">{{ post.position }}</span></h3>
+          <div>
+            {{ post.content }}
+          </div>
+          {% for skill in post.skills %}
+          <span class="label">{{ skill }}</span>
+          {% endfor %}
+        <article>
+        {% endfor %}
+      </section>
+
+      <section role="formation">
+        <h2>Formation universitaire</h2>
+        <ul>
+          <li>Master Informatique Image et Réseaux</li>
+          <li>Licence Mathématiques, Informatique et Statistiques</li>
+          <li>DUT Informatique</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="span4">
+      <aside role="competences">
+        <h2>Compétences techniques</h2>
+        <div>
+
+          {% for category in page.skill-categories %}
+          <h3>{{ category.title }}</h3>
+          <table class="skills">
+            {% for skill in category.skills %}
+            <tr>
+              <td class="skill-name"><span>{{ skill.title }}</span></td>
+              <td class="skill-level"><div class="progress progress-info level-gauge"><div class="bar level-{{ skill.level }}"></div></div></td>
+            </tr>
+            {% endfor %}
+          </table>
+          {% endfor %}
+
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
