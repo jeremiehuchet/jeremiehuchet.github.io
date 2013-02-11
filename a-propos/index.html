@@ -82,7 +82,16 @@ skill-categories:
         {% for post in site.posts %}
         {% if post.layout == 'experience' %}
 
-        <article class="experience">
+        <article class="experience well well-small">
+          <div class="additional-informations pull-right">
+            <span class="label label-info">
+              {{ post.company }} 
+              {% if post.client %}
+              <br/>
+              <span class="label label-info-inverse">{{ post.client }}</span>
+              {% endif %}
+            </span>
+          </div>
           <h3>{{ post.title }} <span class="badge badge-info">{{ post.position }}</span></h3>
           <div>
             {{ post.content }}
@@ -90,13 +99,13 @@ skill-categories:
           {% for skill in post.skills %}
           <span class="label">{{ skill }}</span>
           {% endfor %}
-        <article>
+        </article>
 
         {% endif %}
         {% endfor %}
       </section>
 
-      <section role="formation">
+      <section role="formation well well-small">
         <h2>Formation universitaire</h2>
         <ul>
           <li>Master Informatique Image et Réseaux</li>
@@ -109,9 +118,9 @@ skill-categories:
     <div class="span4">
       <aside role="competences">
         <h2>Compétences techniques</h2>
-        <div>
 
-          {% for category in page.skill-categories %}
+        {% for category in page.skill-categories %}
+        <div class="well well-small">
           <h3>{{ category.title }}</h3>
           <table class="skills">
             {% for skill in category.skills %}
@@ -121,9 +130,9 @@ skill-categories:
             </tr>
             {% endfor %}
           </table>
-          {% endfor %}
-
         </div>
+        {% endfor %}
+
       </section>
     </div>
   </div>

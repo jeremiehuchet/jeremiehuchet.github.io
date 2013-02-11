@@ -19,6 +19,18 @@ span.menu-item-blog {
   background-image: url('/img/ic-blog.png');
 }
 
+/* LABELS */
+div.additional-informations {
+  text-align: center;
+}
+div.additional-informations span.label {
+   display: block;
+}
+div.additional-informations span.label span.label {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
 /* BASE LAYOUT */
 h1 {
   display: none;
@@ -47,6 +59,9 @@ div#content-wrapper ul li {
 }
 
 /* ABOUT PAGE */
+div#a-propos h3 {
+  margin-top: 0px;
+}
 div#a-propos article.experience {
 	margin: 10px 0 30px 0;
 }
@@ -58,6 +73,9 @@ div#a-propos table.skills {
 }
 div#a-propos table.skills tr {
 	border-bottom: 1px dotted #e2e2e2;
+}
+div#a-propos table.skills tr:last-child {
+	border-bottom: none;
 }
 div#a-propos table.skills td.skill-name {
 	background: url('/img/bg-li-arrow.png') no-repeat 3px 6px;

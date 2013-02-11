@@ -3064,8 +3064,8 @@ table th[class*="span"],
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
+  background-color: #ffffff;
+  border: 1px solid #ededed;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
@@ -6036,6 +6036,30 @@ a.badge:hover {
 
 .affix {
   position: fixed;
+}
+
+h2 {
+  font-size: 22.75px;
+}
+
+h3 {
+  font-size: 19.5px;
+}
+
+.label-info-inverse,
+.badge-info-inverse {
+  color: #6a0406;
+  background-color: #ffffff;
+}
+
+.label-info-inverse[href],
+.badge-info-inverse[href] {
+  background-color: #e6e6e6;
+}
+
+.label-inverse[href],
+.badge-inverse[href] {
+  background-color: #e6e6e6;
 }
 
 .progress-chili .bar {
