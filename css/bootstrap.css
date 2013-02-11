@@ -6038,6 +6038,10 @@ a.badge:hover {
   position: fixed;
 }
 
+.mred {
+  color: #700407;
+}
+
 h2 {
   font-size: 22.75px;
 }
@@ -6046,19 +6050,24 @@ h3 {
   font-size: 19.5px;
 }
 
+.label-info,
+.badge-info {
+  background-color: #700407;
+}
+
+.label-info[href],
+.badge-info[href] {
+  background-color: #3f0204;
+}
+
 .label-info-inverse,
 .badge-info-inverse {
-  color: #6a0406;
+  color: #700407;
   background-color: #ffffff;
 }
 
 .label-info-inverse[href],
 .badge-info-inverse[href] {
-  background-color: #e6e6e6;
-}
-
-.label-inverse[href],
-.badge-inverse[href] {
   background-color: #e6e6e6;
 }
 
@@ -6088,15 +6097,7 @@ h3 {
 }
 
 .footer {
-  color: #ffffff;
-  background-color: #8d0609;
-  background-image: -moz-linear-gradient(top, #a0070b, #700407);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a0070b), to(#700407));
-  background-image: -webkit-linear-gradient(top, #a0070b, #700407);
-  background-image: -o-linear-gradient(top, #a0070b, #700407);
-  background-image: linear-gradient(to bottom, #a0070b, #700407);
-  background-repeat: repeat-x;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffa0070b', endColorstr='#ff700407', GradientType=0);
+  color: #700407;
 }
 
 .navbar .nav {
