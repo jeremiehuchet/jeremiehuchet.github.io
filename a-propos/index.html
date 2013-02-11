@@ -83,7 +83,8 @@ skill-categories:
         {% if post.layout == 'experience' %}
 
         <article class="experience well well-small">
-          <div class="additional-informations pull-right">
+          <div class="pull-right additional-informations">
+            <span class="label label-inverse">{{ post.period }}</span>
             <span class="label label-info">
               {{ post.company }} 
               {% if post.client %}

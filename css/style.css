@@ -23,10 +23,14 @@ span.menu-item-blog {
 div.additional-informations {
   text-align: center;
 }
+div.additional-informations span {
+  vertical-align: middle;
+}
 div.additional-informations span.label {
-   display: block;
+   margin-left: 5px;
 }
 div.additional-informations span.label span.label {
+  display: block;
   margin-left: -2px;
   margin-right: -2px;
 }
