@@ -49,35 +49,36 @@ h1 {
   margin-top: 70px;
   border-top: 1px solid #bbb;
   background-color: #7f7f7f;
+  background-image: url('/img/bg-footer.png');
 }
 .footer ul.links {
   margin: 0px;
   list-style-type: none;
   font-weight: bold;
 }
-.github,
-.googleplus {
+.footer .btn {
   color: white;
   line-height: 32px;
-  padding: 10px 0px 10px 32px;
+  padding-left: 32px;
+  margin: 4px;
   background-repeat: no-repeat;
   background-position: left;
 }
-.github {
+.btn.github {
   background-image: url('/img/ic-github-32.png');
 }
-.googleplus {
+.btn.googleplus {
   background-image: url('/img/ic-googleplus-32.png');
 }
-.github:hover,
-.googleplus:hover {
-  color: white;
+.btn.github:hover,
+.btn.googleplus:hover {
+  background-color: white;
   text-decoration: none;
 }
-.github:hover {
+.btn.github:hover {
   background-image: url('/img/ic-github-32-hover.png');
 }
-.googleplus:hover {
+.btn.googleplus:hover {
   background-image: url('/img/ic-googleplus-32-hover.png');
 }
 div#content-wrapper {
