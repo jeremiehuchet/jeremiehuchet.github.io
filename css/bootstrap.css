@@ -6071,6 +6071,17 @@ h3 {
   background-color: #e6e6e6;
 }
 
+.label-white,
+.badge-white {
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.label-white[href],
+.badge-white[href] {
+  background-color: #1a1a1a;
+}
+
 .progress-chili .bar {
   background-color: #8d0609;
   background-image: -moz-linear-gradient(top, #a0070b, #700407);

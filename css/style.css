@@ -104,6 +104,19 @@ div#content-wrapper ul li {
 	padding-left: 15px;
 }
 
+/* BLOG PAGE */
+div.blog-date .day {
+  font-size: 2em;
+}
+div.blog-date .day,
+div.blog-date .month.year {
+  vertical-align: middle;
+}
+div.blog-date .label .label.month.year {
+  margin-right: -2px;
+  text-align: right;
+}
+
 /* ABOUT PAGE */
 div#a-propos h3 {
   margin-top: 0px;
