@@ -7,7 +7,7 @@ Quand on fait de petits modules maven, parfois c'est pratique de les déployer q
 En local ? Ce n'est pas très pratique si on utilise plusieurs postes et surtout ça ne facilite pas la tâche à ceux qui souhaiteraient réutiliser le module en question. 
 Sur son serveur perso ? Oui on en a tous un, mais niveau qualité de service et surtout niveau disponibilité c'est beaucoup moins garanti. 
 
-J'ai vu quelques tuto pour déployer ses artefacts sur Github. Le problème c'est qu'ils s'intégraient dans un cycle de release automatique avec le maven-release-plugin. J'ai cherché un peu et j'ai trouvré la solution suivante.
+J'ai vu quelques tuto pour déployer ses artefacts sur Github. Le problème c'est qu'ils s'intégraient mal dans un cycle de release automatique avec le maven-release-plugin. J'ai cherché un peu et j'ai trouvré la solution suivante.
 
 Le principe est le même que dans les différents articles que j'ai lu : la différence c'est qu'on pousse dans la branche gh-pages avec le site-maven-plugin de com.github.github au lieu de le faire à la main. 
 
