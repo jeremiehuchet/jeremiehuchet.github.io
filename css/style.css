@@ -39,7 +39,6 @@ div.additional-informations span.label span.label {
 .center {
   text-align: center;
 }
-
 h1 {
   display: none;
 }
@@ -85,9 +84,12 @@ div#content-wrapper {
   margin-top: 40px;
 }
 
+/* TITLES */
 div#content-wrapper h2 {
   border-bottom: 1px solid #bbb;
 }
+div#content-wrapper h2 a {
+  color: inherit;
 }
 div#content-wrapper h3 {
   padding-left: 30px;

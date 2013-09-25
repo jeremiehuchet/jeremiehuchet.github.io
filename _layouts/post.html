@@ -1,0 +1,23 @@
+---
+layout: base
+---
+<div class="container">
+  <div class="row">
+    <section class="span12">
+      <article>
+        <div class="pull-right blog-date">
+          <span class="label label-inverse">
+            <span class="day">{{ page.date | date: "%d" }}</span>
+            <span class="label label-white month year">
+              {{ page.date | date: "%B" }}
+              <br/>
+              {{ page.date | date: "%Y" }}
+            </span>
+          </span>
+        </div>
+        <h2>{{ page.title }}</h2>
+        {{ content }}
+      </article>
+    </section>
+  </div>
+</div>
