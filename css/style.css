@@ -85,9 +85,6 @@ div#content-wrapper {
   margin-top: 40px;
 }
 
-div#content-wrapper h1 {
-	display: none;
-}
 div#content-wrapper h2 {
   border-bottom: 1px solid #bbb;
 }
