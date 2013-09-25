@@ -82,26 +82,29 @@ h1 {
   background-image: url('/img/ic-googleplus-32-hover.png');
 }
 div#content-wrapper {
-	margin-top: 40px;
+  margin-top: 40px;
 }
 
 div#content-wrapper h1 {
 	display: none;
 }
 div#content-wrapper h2 {
-	border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
 }
 div#content-wrapper h3 {
-	padding-left: 30px;
-	background: url('/img/bg-h3-arrow.png') no-repeat left center;
+  padding-left: 30px;
+  background: url('/img/bg-h3-arrow.png') no-repeat left center;
 }
+
+/* LISTS */
 div#content-wrapper ul {
-	list-style: none;
-	margin-left: 0px;
+  list-style: none;
+  margin-left: 0px;
 }
 div#content-wrapper ul li {
-	background: url('/img/bg-li-arrow.png') no-repeat 3px 6px;
-	padding-left: 15px;
+  background: url('/img/bg-li-arrow.png') no-repeat 3px 6px;
+  padding-left: 15px;
 }
 
 /* BLOG PAGE */
@@ -122,60 +125,60 @@ div#a-propos h3 {
   margin-top: 0px;
 }
 div#a-propos article.experience {
-	margin: 10px 0 30px 0;
+  margin: 10px 0 30px 0;
 }
 div#a-propos article.experience h3 .badge-info {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 div#a-propos table.skills {
-	width: 100%;
+  width: 100%;
 }
 div#a-propos table.skills tr {
-	border-bottom: 1px dotted #e2e2e2;
+  border-bottom: 1px dotted #e2e2e2;
 }
 div#a-propos table.skills tr:last-child {
-	border-bottom: none;
+  border-bottom: none;
 }
 div#a-propos table.skills td.skill-name {
-	background: url('/img/bg-li-arrow.png') no-repeat 3px 6px;
-	padding-left: 15px;
+  background: url('/img/bg-li-arrow.png') no-repeat 3px 6px;
+  padding-left: 15px;
 }
 div#a-propos table.skills td.skill-level {
-	width: 40%;
+  width: 40%;
 }
 div#a-propos table.skills td.skill-level div {
-	height: 5px;
+  height: 5px;
 }
 div#a-propos table.skills td.skill-level div.level-gauge {
-	margin: 4px 0;
+  margin: 4px 0;
 }
 div#a-propos table.skills td.skill-level div.level-1 {
-	width: 10%;
+  width: 10%;
 }
 div#a-propos table.skills td.skill-level div.level-2 {
-	width: 20%;
+  width: 20%;
 }
 div#a-propos table.skills td.skill-level div.level-3 {
-	width: 30%;
+  width: 30%;
 }
 div#a-propos table.skills td.skill-level div.level-4 {
-	width: 40%;
+  width: 40%;
 }
 div#a-propos table.skills td.skill-level div.level-5 {
-	width: 50%;
+  width: 50%;
 }
 div#a-propos table.skills td.skill-level div.level-6 {
-	width: 60%;
+  width: 60%;
 }
 div#a-propos table.skills td.skill-level div.level-7 {
-	width: 70%;
+  width: 70%;
 }
 div#a-propos table.skills td.skill-level div.level-8 {
-	width: 80%;
+  width: 80%;
 }
 div#a-propos table.skills td.skill-level div.level-9 {
-	width: 90%;
+  width: 90%;
 }
 div#a-propos table.skills td.skill-level div.level-10 {
-	width: 100%;
+  width: 100%;
 }
