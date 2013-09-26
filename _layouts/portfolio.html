@@ -1,0 +1,28 @@
+---
+layout: base
+---
+<div class="container">
+  <div class="row">
+    <section class="span12">
+      <article>
+        <div class="thumbnail pull-right" style="background-color: white">
+          <img src="{{ page.url }}/logo.png" />
+        </div>
+        <h2>{{ page.title }}</h2>
+        <div class="well">
+          {{ content }}
+          <p>
+            {% for button in page.buttons %}
+            <a href="{{ button.href }}" class="btn btn-small" title="{{ button.title }}">{{ button.label }}</a>
+            {% endfor %}
+          </p>
+          <p>
+            {% for skill in page.skills %}
+            <span class="label">{{ skill }}</span>
+            {% endfor %}
+          </p>
+        </div>
+      </article>
+    </section>
+  </div>
+</div>

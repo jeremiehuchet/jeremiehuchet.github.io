@@ -1,0 +1,44 @@
+---
+layout: default
+title: Portfolio
+---
+<div id="portfolio">
+  <section>
+    <h2>Projets</h2>
+    <div class="row">
+
+     {% for post in site.posts %}
+     {% if post.layout == 'portfolio' %}
+
+     <div class="span6">
+       <article class="well well-small">
+         <div class="thumbnail pull-right">
+           <a href="{{ post.url }}" title="Plus d'informations sur {{ post.title }}">
+             <img src="{{ post.url }}/logo.png" />
+           </a>
+         </div>
+         <h3>{{ post.title }}</h3>
+         <p>
+           {{ post.abstract }}
+         </p>
+         <p>
+           <a href="{{ post.url }}" class="btn btn-small" title Plus d'informations sur {{ post.title }}">Plus d'informations</a>
+           {% for button in post.buttons %}
+           <a href="{{ button.href }}" class="btn btn-small" title="{{ button.title }}">{{ button.label }}</a>
+           {% endfor %}
+         </p>
+         <p>
+           {% for skill in post.skills %}
+           <span class="label">{{ skill }}</span>
+           {% endfor %}
+         </p>
+        <div class="clearfix" />
+      </article>
+    </div>
+
+    {% endif %}
+    {% endfor %}
+
+  </section>
+</div>
+
