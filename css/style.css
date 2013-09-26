@@ -97,13 +97,16 @@ div#content-wrapper h3 {
 }
 
 /* LISTS */
-div#content-wrapper ul {
+div#content-wrapper ul.red-arrow {
   list-style: none;
   margin-left: 0px;
 }
-div#content-wrapper ul li {
+div#content-wrapper ul.red-arrow li {
   background: url('/img/bg-li-arrow.png') no-repeat 3px 6px;
   padding-left: 15px;
+}
+div#content-wrapper ul.red-arrow li p {
+  margin: 0px;
 }
 
 /* BLOG PAGE */
