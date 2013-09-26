@@ -15,6 +15,8 @@
     <link rel='stylesheet' id='bootstrap-responsive-css' href='/css/bootstrap-responsive.css' type='text/css' media='all' />
     <link rel='stylesheet' id='bootstrap-override-css' href='/css/style.css' type='text/css' media='all' />
 
+    <link rel='stylesheet' id='fancybox-css' href='/lib/fancybox/jquery.fancybox.css' />
+
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -64,8 +66,10 @@
 
     <script type='text/javascript' src='/js/jquery-1.7.2.js'></script>
     <script type='text/javascript' src='/js/bootstrap.js'></script>
+    <script type='text/javascript' src='/lib/fancybox/jquery.fancybox.pack.js'></script>
     <script type='text/javascript'>
       $('ul').not('.thumbnails').addClass('red-arrow');
+      $('.fancybox').fancybox();
     </script>
   </body>
 </html>
