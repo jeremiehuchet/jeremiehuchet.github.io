@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /nominatim-java-api/
+Disallow: /onebusaway-java-api/
+Disallow: /rennes-data-api/
+Disallow: /bootstrap/
+Disallow: /slf4j/
+Disallow: /acrachilisync/
+Disallow: /osmdroid-itinerennes/
+Disallow: /jcr-transaction-sample/
+Disallow: /dudie-parent/
+Disallow: /robolectric/
+Disallow: /jcl-mail-handler/
