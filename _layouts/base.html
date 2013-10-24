@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
   <head>
-   <title>Jérémie Huchet | Développeur Java/JEE, Web & Android</title>
+   <title>{{ page.title }}</title>
     <meta charset="UTF-8" />
+    <meta name="Content-Language" content="fr">
+{% if page.meta.subject != null %}
+    <meta name="Subject" content="{{ page.meta.subject }}">
+{% endif %}
+{% if page.meta.description %}
+    <meta name="Description" content="{{ page.meta.description }}">
+{% endif %}
+    <meta name="Keywords" content="{% if page.meta.keywords %} {{ page.meta.keywords }} , {% endif %}{{ site.meta.keywords }}">
+    <meta name="Author" content="Jérémie Huchet">
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="/ico/favicon.ico">
@@ -23,7 +32,7 @@
   </head>
   <body>
     <header>
-      <h1>{% if page.title %} {{ page.title }} {% endif %}</h1>
+      <h1>{{ page.title }}</h1>
       <nav class="navbar navbar-inverse  navbar-fixed-top">
         <div class="navbar-inner">
           <div class="container">

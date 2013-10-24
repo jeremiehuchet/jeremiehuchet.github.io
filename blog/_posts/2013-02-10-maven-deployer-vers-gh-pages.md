@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Maven, déployer sur Github simplement
+meta:
+ keywords: maven, java, github, git, deployer, repository, mvn
+ subject: Une astuce de plus pour déployer ses artefacts maven
 ---
 
 Quand on fait de petits modules maven, parfois c'est pratique de les déployer quelque part pour les utiliser dans d'autres projets. La question est : où les déployer ? 

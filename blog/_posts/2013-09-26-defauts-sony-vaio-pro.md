@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 'Sony Vaio Pro 13 : défauts'
+meta:
+ keywords: sony, vaio, pro, 13, pros, cons, avantages, inconvénients, bruit, noise, fan, ventilateur
 ---
 
 L'ultrabook est superbe et je trouve que certains défauts que j'ai pu lire dans des articles en ligne ne sont pas forcément présents.Au contraire, j'en ai noté d'autres.

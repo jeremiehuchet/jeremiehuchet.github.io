@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Linux sur Sony Vaio Pro 13
+meta:
+ keywords: sony, vaio, pro, 13, efi, uefi, installation, linux, arch, boot, grub
 ---
 
 Petit retour d'expérience sur l'installation de Arch Linux sur le Sony Vaio Pro 13. De manière générale, tout - ou presque - fonctionne bien du premier coup. LE truc qui m'a fait galérer c'est l'UEFI.
