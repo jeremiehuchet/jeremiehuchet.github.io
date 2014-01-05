@@ -12,6 +12,7 @@ Je pense avoir essayé de faire les choses dans les règles mais ça n'a pas abo
 ### partitions
 
 À l'origine le SSD est partitionné en mode GPT avec 6 paritions : 
+
 <table class="table">
   <tr>
     <th>device</th>
