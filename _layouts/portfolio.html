@@ -3,12 +3,12 @@ layout: base
 ---
 <div class="container">
   <div class="row">
-    <section class="span12">
+    <section class="span8">
       <article>
-        <div class="thumbnail pull-right" style="background-color: white">
+        <h2>{{ page.title }}</h2>
+        <div class="thumbnail pull-right" style="background-color: white; margin: 10px 10px 0 0;">
           <img src="{{ page.url }}/logo.png" />
         </div>
-        <h2>{{ page.title }}</h2>
         <div class="well">
           {{ content }}
           <p>
@@ -23,6 +23,22 @@ layout: base
           </p>
         </div>
       </article>
+    </section>
+    <section class="span4">
+      <h2>Autres projets</h2>
+
+      {% for post in site.posts %}
+      {% if post.layout == 'portfolio' %}
+      {% if post.url != page.url %}
+
+        <article class="well well-small">
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.abstract }}</p>
+        </article>
+
+        {% endif %}
+      {% endif %}
+      {% endfor %}
     </section>
   </div>
 </div>
