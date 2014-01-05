@@ -107,7 +107,12 @@ skill-categories:
               {% endif %}
             </span>
           </div>
-          <h3>{{ post.title }} <span class="badge badge-info">{{ post.position }}</span></h3>
+          <h3>
+            {{ post.title }}
+            {% for role in post.position %}
+            <span class="badge badge-info">{{ role }}</span>
+            {% endfor %}
+          </h3>
           <div>
             {{ post.content }}
           </div>
