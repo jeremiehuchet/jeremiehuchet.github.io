@@ -13,8 +13,24 @@ sitemap:
     <lastmod>{{ page.sitemap.lastmod }}</lastmod>
     <priority>{{ page.sitemap.priority }}</priority>
   </url>
+
   {% for post in site.posts %}
     {% if post.layout == 'post' %}
+  <url>
+    <loc>{{ page.siteurl }}{{ post.url }}</loc>
+    {% if post.lastmod == null %}
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+    {% endif %}
+  {% endfor %}
+
+  {% for post in site.posts %}
+    {% if post.layout == 'portfolio' %}
   <url>
     <loc>{{ page.siteurl }}{{ post.url }}</loc>
     {% if post.lastmod == null %}
