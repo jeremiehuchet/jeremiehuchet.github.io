@@ -19,7 +19,7 @@ title: Blog /Jérémie Huchet
           </span>
         </span>
       </div>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h2><a id="{{ post.id }}" href="{{ post.url }}">{{ post.title }}</a></h2>
       <div class="well well-small">
         {{ post.content }}
       </div>
@@ -38,6 +38,17 @@ title: Blog /Jérémie Huchet
 
     <h2>Android</h2>
     <p>Expérience en développement mobile Android : ItinéRennes</p>
+
+    <h2>Articles</h2>
+    <ul>
+     {% for post in site.posts %}
+      {% if post.layout == 'post' %}
+
+      <li><a href="#{{ post.id }}">{{ post.title }}</a></li>
+
+      {% endif %}
+    {% endfor %}
+    </ul>
   </section>
 
 </div>
