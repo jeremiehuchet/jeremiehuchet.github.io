@@ -34,6 +34,10 @@ div.additional-informations span.label span.label {
   margin-left: -2px;
   margin-right: -2px;
 }
+.navbar-inverse .nav-collapse .nav > li > a,
+.navbar-inverse .nav-collapse .dropdown-menu a {
+  color: white;
+}
 
 /* BASE LAYOUT */
 .center {
@@ -107,6 +111,14 @@ div#content-wrapper ul.red-arrow li {
 }
 div#content-wrapper ul.red-arrow li p {
   margin: 0px;
+}
+
+/* BADGES */
+span.badge.badge-info a {
+  color: white;
+}
+span.badge.badge-info a:hover {
+  color: white;
 }
 
 /* BLOG PAGE */
