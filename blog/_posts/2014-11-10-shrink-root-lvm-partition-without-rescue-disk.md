@@ -17,10 +17,20 @@ Here is how to resize an unmountable parition, e.g. your system root partition.
 4. reboot so LVM can do the merge
 5. reduce ROOT volume size with option `--resizefs`
 
+⚠ First you should remount the partition in read-only mode. I wasn't able to do it because of all the stuff running and I decided to take the risk to continue. If you do so, **you're responsible**.
 
-First you should remount the partition in read-only mode. I wasn't able to do it because of all the stuff running and I decided to take the risk to continue. If you do so, you're responsible.
+### the short way
 
-### 1. create a snapshot SNAP_ROOT
+    lvcreate -s ssd/root -L 40G -n root_backup
+    e2fsck -f /dev/mapper/ssd-root_backup \
+        && resize2fs -p -M /dev/mapper/ssd-root_backup
+    lvconvert --merge ssd/root_backup
+    reboot
+    lvresize -L 20G -r ssd/root
+
+### the long way
+
+#### 1. create a snapshot SNAP_ROOT
 
 Create a snapshot of the partition, I used a size of 40G (same size of the original partition) but a such value shouldn't be necessary.
 
@@ -58,7 +68,7 @@ Running `lvdisplay` shows the original volume and its snapshot. We can see:
     Allocated to snapshot  0,00%
     …
 
-### 2. shrink the filesystem on SNAP_ROOT
+#### 2. shrink the filesystem on SNAP_ROOT
 
 Firstly, a filesystem check must be forced:
 
@@ -92,7 +102,7 @@ We can run `lvdisplay` to observe how many space the resize operation taken from
     Allocated to snapshot  17,13%
     ...
 
-### 3. merge SNAP_ROOT to ROOT
+#### 3. merge SNAP_ROOT to ROOT
 
 `lvconvert --merge ssd/root_backup`
 
@@ -100,13 +110,13 @@ We can run `lvdisplay` to observe how many space the resize operation taken from
     Can't merge over open origin volume.
     Merging of snapshot ssd/root_backup will occur on next activation of ssd/root.
 
-### 4. reboot
+#### 4. reboot
 
 LVM can't merge a snapshot to an active partition: the partition has te be deactivated. This is done by rebooting the system.
 
 `reboot`
 
-### 5. reduce ROOT volume
+#### 5. reduce ROOT volume
 
 Let's see the new partition size we have:
 
