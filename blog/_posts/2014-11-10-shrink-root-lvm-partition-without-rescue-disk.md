@@ -24,15 +24,15 @@ First you should remount the partition in read-only mode. I wasn't able to do it
 
 Create a snapshot of the partition, I used a size of 40G (same size of the original partition) but a such value shouldn't be necessary.
 
-    lvcreate -s ssd/root -L 40G -n root_backup
+`lvcreate -s ssd/root -L 40G -n root_backup`
 
-Running `lvdisplay ssd/root ssd/root_backup` shows the original volume and its snapshot. We can see:
+Running `lvdisplay` shows the original volume and its snapshot. We can see:
 
 * original volume size is 40GB
 * snapshot as _Copy-On-Write-table size_ of 40GiB
 * 0% of the _COW-table_ is used for now
 
-`lvdisplay` output:
+`lvdisplay ssd/root ssd/root_backup`
 
     --- Logical volume ---
     LV Path                /dev/ssd/root
@@ -62,7 +62,8 @@ Running `lvdisplay ssd/root ssd/root_backup` shows the original volume and its s
 
 Firstly, a filesystem check must be forced:
 
-    e2fsck -f /dev/mapper/ssd-root_backup
+`e2fsck -f /dev/mapper/ssd-root_backup`
+
     e2fsck 1.42.12 (29-Aug-2014)
     Passe 1 : vérification des i-noeuds, des blocs et des tailles
     Passe 2 : vérification de la structure des répertoires
@@ -73,15 +74,17 @@ Firstly, a filesystem check must be forced:
 
 Then we are able to resize it:
 
-    resize2fs -p -M /dev/mapper/ssd-root_backup
+`resize2fs -p -M /dev/mapper/ssd-root_backup`
+
     resize2fs 1.42.12 (29-Aug-2014)
     En train de redimensionner le système de fichiers sur /dev/mapper/ssd-root_backup à 4527614 (4k) blocs.
     The filesystem on /dev/mapper/ssd-root_backup is now 4527614 (4k) blocks long.
 
 Shrinking the filesystem may cause a lot of changes to the volume. During this operation the allocated space of the _COW-table_ will increase.
-We can run `lvdisplay ssd/root_backup` to observe how many space the resize operation taken from the snapshot COW-table.
+We can run `lvdisplay` to observe how many space the resize operation taken from the snapshot COW-table.
 
-    lvdisplay ssd/root_backup
+`lvdisplay ssd/root_backup`
+
     --- Logical volume ---
     LV Path                /dev/ssd/root_backup
     LV Name                root_backup
@@ -91,7 +94,8 @@ We can run `lvdisplay ssd/root_backup` to observe how many space the resize oper
 
 ### 3. merge SNAP_ROOT to ROOT
 
-    lvconvert --merge ssd/root_backup
+`lvconvert --merge ssd/root_backup`
+
     Logical volume ssd/root contains a filesystem in use.
     Can't merge over open origin volume.
     Merging of snapshot ssd/root_backup will occur on next activation of ssd/root.
@@ -100,19 +104,19 @@ We can run `lvdisplay ssd/root_backup` to observe how many space the resize oper
 
 LVM can't merge a snapshot to an active partition: the partition has te be deactivated. This is done by rebooting the system.
 
-    reboot
+`reboot`
 
 ### 5. reduce ROOT volume
 
 Let's see the new partition size we have:
 
-    df -h
+`df -h`
+
     Sys. de fichiers       Taille Utilisé Dispo Uti% Monté sur
     /dev/mapper/ssd-root      17G     16G  742M  96% /
 
-&nbsp;
+`lvdisplay ssd/root`
 
-    lvdisplay ssd/root
     --- Logical volume ---
     LV Path                /dev/ssd/root
     LV Name                root
@@ -122,7 +126,8 @@ Let's see the new partition size we have:
 
 The filesystem has a size of 17G, but the volume size is always 40G. We must use `lvm` to resize the volume. We use option `-r`/`--resizefs` which tell LVM to resize the underlying filesystem to the new size of the volume.
 
-    lvresize -L 20G -r ssd/root
+`lvresize -L 20G -r ssd/root`
+
     resize2fs 1.42.12 (29-Aug-2014)
     Le système de fichiers de /dev/mapper/ssd-root est monté sur / ; le changement de taille doit être effectué en ligne
     old_desc_blocks = 2, new_desc_blocks = 2
@@ -133,13 +138,13 @@ The filesystem has a size of 17G, but the volume size is always 40G. We must use
 
 Now our partition and our volume size are reduced:
 
-    df -h
+`df -h`
+
     Sys. de fichiers       Taille Utilisé Dispo Uti% Monté sur
     /dev/mapper/ssd-root      20G     16G  3,4G  83% /
 
-&nbsp;
+`lvdisplay ssd/root`
 
-    lvdisplay ssd/root
     --- Logical volume ---
     LV Path                /dev/ssd/root
     LV Name                root
