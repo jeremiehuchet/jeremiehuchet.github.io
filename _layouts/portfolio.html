@@ -3,7 +3,7 @@ layout: base
 ---
 <div class="container">
   <div class="row">
-    <section class="span8">
+    <section class="col-md-8">
       <article>
         <h2>{{ page.title }}</h2>
         <div class="thumbnail pull-right" style="background-color: white; margin: 10px 10px 0 0;">
@@ -24,14 +24,14 @@ layout: base
         </div>
       </article>
     </section>
-    <section class="span4">
+    <section class="col-md-4">
       <h2>Autres projets</h2>
 
       {% for post in site.posts %}
       {% if post.layout == 'portfolio' %}
       {% if post.url != page.url %}
 
-        <article class="well well-small">
+        <article class="well well-sm">
           <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
           <p>{{ post.abstract }}</p>
         </article>

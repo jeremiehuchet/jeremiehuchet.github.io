@@ -10,8 +10,8 @@ title: Portfolio
      {% for post in site.posts %}
      {% if post.layout == 'portfolio' %}
 
-     <div class="span6">
-       <article class="well well-small">
+     <div class="col-md-6">
+       <article class="well well-sm">
          <div class="thumbnail pull-right">
            <a href="{{ post.url }}" title="Plus d'informations sur {{ post.title }}">
              <img src="{{ post.url }}/logo.png" />

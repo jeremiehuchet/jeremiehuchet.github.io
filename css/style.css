@@ -1,91 +1,26 @@
 
-/* MENU */
-span.menu-item-home, span.menu-item-about, span.menu-item-portfolio, span.menu-item-blog {
-  padding-left: 28px;
-  background-repeat: no-repeat;
-  background-position: left;
-  display: block;
-}
-span.menu-item-home {
-  background-image: url('/img/ic-home.png');
-}
-span.menu-item-about {
-  background-image: url('/img/ic-about.png');
-}
-span.menu-item-portfolio {
-  background-image: url('/img/ic-portfolio.png');
-}
-span.menu-item-blog {
-  background-image: url('/img/ic-blog.png');
-}
-
-/* LABELS */
-div.additional-informations {
-  text-align: center;
-}
-div.additional-informations span {
-  vertical-align: middle;
-}
-div.additional-informations span.label {
-   margin-left: 5px;
-}
-div.additional-informations span.label span.label {
-  display: block;
-  margin-left: -2px;
-  margin-right: -2px;
-}
-.navbar-inverse .nav-collapse .nav > li > a,
-.navbar-inverse .nav-collapse .dropdown-menu a {
-  color: white;
-}
-
 /* BASE LAYOUT */
-.center {
-  text-align: center;
-}
 h1 {
   display: none;
 }
-.footer {
-  color: white;
-  padding: 30px 0;
-  margin-top: 70px;
-  border-top: 1px solid #bbb;
-  background-color: #7f7f7f;
-  background-image: url('/img/bg-footer.png');
-}
-.footer ul.links {
-  margin: 0px;
-  list-style-type: none;
-  font-weight: bold;
-}
-.footer .btn {
-  color: white;
-  line-height: 32px;
-  padding-left: 32px;
-  margin: 4px;
-  background-repeat: no-repeat;
-  background-position: left;
-}
-.btn.github {
-  background-image: url('/img/ic-github-32.png');
-}
-.btn.googleplus {
-  background-image: url('/img/ic-googleplus-32.png');
-}
-.btn.github:hover,
-.btn.googleplus:hover {
-  background-color: white;
-  text-decoration: none;
-}
-.btn.github:hover {
-  background-image: url('/img/ic-github-32-hover.png');
-}
-.btn.googleplus:hover {
-  background-image: url('/img/ic-googleplus-32-hover.png');
-}
 div#content-wrapper {
   margin-top: 40px;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 160px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 160px;
+  background-color: #700407;
 }
 
 /* TITLES */
@@ -100,99 +35,34 @@ div#content-wrapper h3 {
   background: url('/img/bg-h3-arrow.png') no-repeat left center;
 }
 
-/* LISTS */
-div#content-wrapper ul.red-arrow {
-  list-style: none;
-  margin-left: 0px;
-}
-div#content-wrapper ul.red-arrow li {
-  background: url('/img/bg-li-arrow.png') no-repeat 3px 6px;
-  padding-left: 15px;
-}
-div#content-wrapper ul.red-arrow li p {
-  margin: 0px;
+/* ALIGNMENTS UTILITIES */
+.text-vcenter {
+  vertical-align: middle;
 }
 
-/* BADGES */
-span.badge.badge-info a {
-  color: white;
+/* LABELS */
+.label-has-nested {
+  display:inline-block;
 }
-span.badge.badge-info a:hover {
-  color: white;
+.label-has-nested .label {
+  display:inline-block;
+  margin-top: 2px;
+  margin-left: -2px;
+  margin-right: -2px;
+  font-size: 1em;
 }
+
 
 /* BLOG PAGE */
 div.blog-date .day {
   font-size: 2em;
+  padding-right: 4px;
 }
 div.blog-date .day,
 div.blog-date .month.year {
   vertical-align: middle;
 }
 div.blog-date .label .label.month.year {
-  margin-right: -2px;
   text-align: right;
 }
 
-/* ABOUT PAGE */
-div#a-propos h3 {
-  margin-top: 0px;
-}
-div#a-propos article.experience {
-  margin: 10px 0 30px 0;
-}
-div#a-propos article.experience h3 .badge-info {
-  vertical-align: middle;
-}
-div#a-propos table.skills {
-  width: 100%;
-}
-div#a-propos table.skills tr {
-  border-bottom: 1px dotted #e2e2e2;
-}
-div#a-propos table.skills tr:last-child {
-  border-bottom: none;
-}
-div#a-propos table.skills td.skill-name {
-  background: url('/img/bg-li-arrow.png') no-repeat 3px 6px;
-  padding-left: 15px;
-}
-div#a-propos table.skills td.skill-level {
-  width: 40%;
-}
-div#a-propos table.skills td.skill-level div {
-  height: 5px;
-}
-div#a-propos table.skills td.skill-level div.level-gauge {
-  margin: 4px 0;
-}
-div#a-propos table.skills td.skill-level div.level-1 {
-  width: 10%;
-}
-div#a-propos table.skills td.skill-level div.level-2 {
-  width: 20%;
-}
-div#a-propos table.skills td.skill-level div.level-3 {
-  width: 30%;
-}
-div#a-propos table.skills td.skill-level div.level-4 {
-  width: 40%;
-}
-div#a-propos table.skills td.skill-level div.level-5 {
-  width: 50%;
-}
-div#a-propos table.skills td.skill-level div.level-6 {
-  width: 60%;
-}
-div#a-propos table.skills td.skill-level div.level-7 {
-  width: 70%;
-}
-div#a-propos table.skills td.skill-level div.level-8 {
-  width: 80%;
-}
-div#a-propos table.skills td.skill-level div.level-9 {
-  width: 90%;
-}
-div#a-propos table.skills td.skill-level div.level-10 {
-  width: 100%;
-}

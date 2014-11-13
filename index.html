@@ -4,13 +4,13 @@ title: Blog /Jérémie Huchet
 ---
 <div class="row">
 
-  <section class="span8">
+  <section class="col-md-8">
     {% for post in site.posts %}
       {% if post.layout == 'post' %}
 
     <article>
       <div class="pull-right blog-date">
-        <span class="label label-inverse">
+        <span class="label label-inverse label-has-nested">
           <span class="day">{{ post.date | date: "%d" }}</span>
           <span class="label label-white month year">
             {{ post.date | date: "%B" }}
@@ -20,7 +20,7 @@ title: Blog /Jérémie Huchet
         </span>
       </div>
       <h2><a id="{{ post.id }}" href="{{ post.url }}">{{ post.title }}</a></h2>
-      <div class="well well-small">
+      <div class="well well-sm">
         {{ post.content }}
       </div>
     </article>
@@ -29,7 +29,7 @@ title: Blog /Jérémie Huchet
     {% endfor %}
   </section>
 
-  <section class="span4">
+  <section class="col-md-4">
     <h2>Développement Web</h2>
     <p>Développement de site web, intégration de gestionnaire de contenus</p>
 

@@ -89,35 +89,35 @@ skill-categories:
 ---
 <div id="a-propos">
   <div class="row">
-    <div class="span8">
+    <div class="col-md-8">
       <section>
         <h2>Expériences professionnelles</h2>
 
         {% for post in site.posts %}
         {% if post.layout == 'experience' %}
 
-        <article class="experience well well-small">
-          <div class="pull-right additional-informations">
-            <span class="label label-inverse">{{ post.period }}</span>
-            <span class="label label-info">
+        <article class="experience well well-sm">
+          <div class="pull-right">
+            <span class="label label-inverse text-vcenter">{{ post.period }}</span>
+            <span class="label label-primary label-has-nested text-vcenter">
               {{ post.company }} 
               {% if post.client %}
               <br/>
-              <span class="label label-info-inverse">{{ post.client }}</span>
+              <span class="label label-primary-inverse">{{ post.client }}</span>
               {% endif %}
             </span>
           </div>
           <h3>
             {{ post.title }}
             {% for role in post.position %}
-            <span class="badge badge-info">{{ role }}</span>
+            <span class="badge badge-primary text-vcenter">{{ role }}</span>
             {% endfor %}
           </h3>
           <div>
             {{ post.content }}
           </div>
           {% for skill in post.skills %}
-          <span class="label">{{ skill }}</span>
+          <span class="label label-default">{{ skill }}</span>
           {% endfor %}
         </article>
 
@@ -127,7 +127,7 @@ skill-categories:
 
       <section>
         <h2>Formation universitaire</h2>
-        <div class="well well-small">
+        <div class="well well-sm">
           <ul>
             <li>Master Informatique Image et Réseaux</li>
             <li>Licence Mathématiques, Informatique et Statistiques</li>
@@ -137,18 +137,18 @@ skill-categories:
       </section>
     </div>
 
-    <div class="span4">
+    <div class="col-md-4">
       <aside>
         <h2>Compétences techniques</h2>
 
         {% for category in page.skill-categories %}
-        <div class="well well-small">
+        <div class="well well-sm">
           <h3>{{ category.title }}</h3>
           <table class="skills">
             {% for skill in category.skills %}
             <tr>
               <td class="skill-name"><span>{{ skill.title }}</span></td>
-              <td class="skill-level"><div class="progress progress-chili level-gauge"><div class="bar level-{{ skill.level }}"></div></div></td>
+              <td class="skill-level"><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="10"  style="width: {{ skill.level }}0%;"></div></div></td>
             </tr>
             {% endfor %}
           </table>
