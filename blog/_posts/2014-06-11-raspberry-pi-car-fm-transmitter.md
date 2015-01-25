@@ -5,7 +5,7 @@ meta:
  keywords: debian, raspbian, raspberry pi, howto, mpd, mpc, music player daemon, fm transmitter
 ---
 
-Voici une petite solution pour utiliser le Raspberry PI comme boite à musique. Personnellement je compte l'installer dans ma voiture :)
+Voici une petite solution pour utiliser le Raspberry PI comme boite à musique. ~~Personnellement je compte l'installer dans ma voiture :)~~ Attention, diffuser sur les ondes radio est règlementé...
 
 ### l'idée
 
@@ -14,7 +14,7 @@ Le Raspberry PI héberge la musique et un démon [mpd](http://fr.wikipedia.org/w
 ### le matériel
 
 - un Raspberry PI
-- un fil de 10cm pour l'antenne
+- un fil de quelques centimères pour l'antenne
 - une clé USB WiFi qui supporte le mode <span title="Access Point">_AP_</span>
 
 #### installation de raspbian
@@ -130,3 +130,48 @@ On démarre le service et on l'active au démarrage :
 
 Il est possible d'en définir plusieurs afin de pouvoir facilement changer la fréquence sur laquelle [pifm] transmet le son.
 
+### photos
+
+#### aménagement dans le boitier du Raspberry PI
+
+J'ai réutilisé le boitier du Raspberry PI. Afin de tout faire rentrer, j'ai ouvert la clé USB wifi. L'ensemble chauffant pas mal, j'ai préféré mettre un petit ventilateur dont le bruit est largement couvert par le bruit ambiant dans ma voiture.
+
+<ul class="thumbnails">
+  <li>
+<a class="thumbnail fancybox" data-fancybox-group="{{ page.id }}" href="{{ page.id}}/box-1.png" title="Aménagement intérieur du boitier du Raspberry PI">
+  <img src="{{ page.id }}/box-1-thumbnail.png" />
+</a>
+  </li>
+</ul>
+
+#### intégration de la carte wifi dans le boitier
+
+Histoire de gagner un peu de place, j'ai supprimé le port USB supérieur et j'ai soudé le cable USB de la clé wifi directement sous la carte du Raspberry PI.
+
+<ul class="thumbnails">
+  <li>
+<a class="thumbnail fancybox" data-fancybox-group="{{ page.id }}" href="{{ page.id}}/wifi-1.png" title="Clé USB wifi d'origine">
+  <img src="{{ page.id }}/wifi-1-thumbnail.png" />
+</a>
+  </li>
+  <li>
+<a class="thumbnail fancybox" data-fancybox-group="{{ page.id }}" href="{{ page.id}}/wifi-2.png" title="Clé USB wifi intégrée dans le boitier">
+  <img src="{{ page.id }}/wifi-2-thumbnail.png" />
+</a>
+  </li>
+  <li>
+<a class="thumbnail fancybox" data-fancybox-group="{{ page.id }}" href="{{ page.id}}/wifi-3.png" title="Découpage du port USB supérieur, la clé wifi est soudée pour économiser la place">
+  <img src="{{ page.id }}/wifi-3-thumbnail.png" />
+</a>
+  </li>
+</ul>
+
+#### le résultat
+
+<ul class="thumbnails">
+  <li>
+<a class="thumbnail fancybox" data-fancybox-group="{{ page.id }}" href="{{ page.id}}/live-1.png" title="En cours d'utilisation">
+  <img src="{{ page.id }}/live-1-thumbnail.png" />
+</a>
+  </li>
+</ul>
