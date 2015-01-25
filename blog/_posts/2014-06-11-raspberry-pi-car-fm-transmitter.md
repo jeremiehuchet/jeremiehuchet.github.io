@@ -7,9 +7,11 @@ meta:
 
 Voici une petite solution pour utiliser le Raspberry PI comme boite à musique. ~~Personnellement je compte l'installer dans ma voiture :)~~ Attention, diffuser sur les ondes radio est règlementé...
 
+![MPDroid pour contrôler la musique émise par le Raspberry PI et diffusée via la radio]({{ page.id }}/result.png)
+
 ### l'idée
 
-Le Raspberry PI héberge la musique et un démon [mpd](http://fr.wikipedia.org/wiki/Music_Player_Daemon) permet de la diffuser vers l'autoradio grâce à [pifm](http://www.icrobotics.co.uk/wiki/index.php/Turning_the_Raspberry_Pi_Into_an_FM_Transmitter). Pour contrôler la lecture de la musique, il existe de nombreux clients pour _mpd_ : Android, web, ligne de commande, ... Le client doit communiquer avec le démon donc on met en place un hotspot WiFi sur le Raspberry PI sur lequel n'importe quel smarphone pourra se connecter.
+Le Raspberry PI héberge la musique et un démon [mpd](http://fr.wikipedia.org/wiki/Music_Player_Daemon) permet de la diffuser vers l'autoradio grâce à [pifm](http://www.icrobotics.co.uk/wiki/index.php/Turning_the_Raspberry_Pi_Into_an_FM_Transmitter). Pour contrôler la lecture de la musique, il existe de nombreux clients pour _mpd_ : Android ([MPDroid](https://play.google.com/store/apps/details?id=com.namelessdev.mpdroid)), web, ligne de commande, ... Le client doit communiquer avec le démon donc on met en place un hotspot WiFi sur le Raspberry PI sur lequel n'importe quel smarphone pourra se connecter.
 
 ### le matériel
 
@@ -106,7 +108,7 @@ On démarre le service et on l'active au démarrage :
     tar zxvf pifm.tar.gz
 
 pifm [nécessite les droits root](https://github.com/rm-hull/pifm#accessing-hardware) pour être exécuté. On configure sudo pour autoriser l'utilisateur MPD à exécuter pifm en root sans avoir besoin de mot passe.
-Il faut ajouter par exemple la lighe suivante dans `/etc/sudoers` :
+Il faut ajouter par exemple la ligne suivante dans `/etc/sudoers` :
 
     mpd ALL=(ALL) NOPASSWD: /opt/pifm/pifm
 
