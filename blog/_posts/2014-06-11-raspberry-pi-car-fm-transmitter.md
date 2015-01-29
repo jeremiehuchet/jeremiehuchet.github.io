@@ -152,16 +152,6 @@ Histoire de gagner un peu de place, j'ai supprimé le port USB supérieur et j'a
 
 <ul class="thumbnails">
   <li>
-<a class="thumbnail fancybox" data-fancybox-group="{{ page.id }}" href="{{ page.id}}/wifi-1.png" title="Clé USB wifi d'origine">
-  <img src="{{ page.id }}/wifi-1-thumbnail.png" />
-</a>
-  </li>
-  <li>
-<a class="thumbnail fancybox" data-fancybox-group="{{ page.id }}" href="{{ page.id}}/wifi-2.png" title="Clé USB wifi intégrée dans le boitier">
-  <img src="{{ page.id }}/wifi-2-thumbnail.png" />
-</a>
-  </li>
-  <li>
 <a class="thumbnail fancybox" data-fancybox-group="{{ page.id }}" href="{{ page.id}}/wifi-3.png" title="Découpage du port USB supérieur, la clé wifi est soudée pour économiser la place">
   <img src="{{ page.id }}/wifi-3-thumbnail.png" />
 </a>
